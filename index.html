@@ -21,17 +21,17 @@
        var liquidityWalletContract = "";
        var treasuryWalletContract = "";
        function connectMintContract() {
-        var nftMinterContractAddress = "0xDA0bab807633f07f013f94DD0E6A4F96F8742B53";
+        var nftMinterContractAddress = "0x5e199E6c07503b30D17BD2b7918A9B29Cd7B0db1";
         nftMinterContract = new web3js.eth.Contract(nftMinterABI, nftMinterContractAddress);
        }
 
       function connectLiquidityWalletContract() {
-        var liquidityWalletAddress = "0xD7ACd2a9FD159E69Bb102A1ca21C9a3e3A5F771B";
+        var liquidityWalletAddress = "0x0FD9fDa9D6844bC0B27158Ddd33Fe0f8D854af79";
         liquidityWalletContract = new web3js.eth.Contract(liquidityWalletABI, liquidityWalletAddress);
       }
 
       function connectTreasuryWalletContract() {
-        var treasuryWalletAddress = "0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47";
+        var treasuryWalletAddress = "0x21eCB34b85e695F7BFA8285D3C5748CfF8814aB3";
         treasuryWalletContract = new web3js.eth.Contract(treasuryWalletABI, treasuryWalletAddress);
       }
       window.addEventListener('load', function () {
