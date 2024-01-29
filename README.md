@@ -54,7 +54,7 @@ pnpm run build
 
 
 ### Uygulama Adımları
-1. Projeye Moralis entegrasyonunda yaşadığım sorunlar nedeniyle uygulamanın çalışmasını göremiyorum ama ve gösteremiyorum.
+1. Projeye Moralis entegrasyonunda yaşadığım sorunlar nedeniyle uygulamanın çalışmasını göremiyorum ve gösteremiyorum.
 2. Proje çalışmasa da contractları "contract" klasörü altında görebilirsiniz. 
 
 
