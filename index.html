@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Minter</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script language="javascript" type="text/javascript" src="./web3.min.js"></script>
+    <script type="module" src="./liquidityWallet_abi.js"></script>
+    <script type="module" src="./treasuryWallet_abi.js"></script>
+    <script type="module" src="./nftMinter_abi.js"></script>
+    <script type="module" src="./moralis.js"></script>
+
+    <script>
+       var web3js = "";
+       var nftMinterContract = "";
+       var liquidityWalletContract = "";
+       var treasuryWalletContract = "";
+       function connectMintContract() {
+        var nftMinterContractAddress = "0xDA0bab807633f07f013f94DD0E6A4F96F8742B53";
+        nftMinterContract = new web3js.eth.Contract(nftMinterABI, nftMinterContractAddress);
+       }
+
+      function connectLiquidityWalletContract() {
+        var liquidityWalletAddress = "0xD7ACd2a9FD159E69Bb102A1ca21C9a3e3A5F771B";
+        liquidityWalletContract = new web3js.eth.Contract(liquidityWalletABI, liquidityWalletAddress);
+      }
+
+      function connectTreasuryWalletContract() {
+        var treasuryWalletAddress = "0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47";
+        treasuryWalletContract = new web3js.eth.Contract(treasuryWalletABI, treasuryWalletAddress);
+      }
+      window.addEventListener('load', function () {
+
+        // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+        if (typeof web3 !== 'undefined') {
+          // Use Mist/MetaMask's provider
+          web3js = new Web3(web3.currentProvider);
+        }
+        else {
+          alert("MetaMask is not detected. You need install Metamask");
+        }
+
+        connectMintContract();
+        connectLiquidityWalletContract();
+        connectTreasuryWalletContract();
+      })
+    </script>
+  </body>
+</html>
